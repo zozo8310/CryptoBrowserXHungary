@@ -1,0 +1,30 @@
+our identification has been saved in C:\Users\nagyz/.ssh/id_rsa
+Your public key has been saved in C:\Users\nagyz/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:Kxls98p6uJ+gJj9oG0IpsI6/e+co4cq0+FMDqXRHk0w zcoz08310@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|    oE.          |
+|     =           |
+|.  .. .          |
+|.o+. o           |
+|++... + S        |
+|* . o. + o       |
+|o+.+ .+.. .      |
+|+oO.+oo+.o       |
+|o**@+++==        |
++----[SHA256]-----+
+
+
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCVTK69bfmjWRtBi3ROYeLPimLTNkHXBAcyrrH5UKamI+v17QII/iJYwZv1qHUbEpu/OyrbZYhAkXR/ZiRxrTS7m8gNBj8xBz0GlCkf5xciFw8+pH0pA/zZphwlmqGMZO8yLNK5cM9zb9KE8qXbWmVrK2N2xLTkHnBcgLyaYF5qGgACCUNYYKEv/3Z/69dMVhLyj92W8eDPxZKYmi9rB948kGtHmK9q7her3HY04nf4Bz9+C6VDV45LTrk5kDVryokRJ4/fJ3zgAfzHJ80QeqYmPFglkgeF3HKcG/XbTH0+sN1nPAH8PxW3EDnJv357ORanE01Puxwg6/ACx6jnOVYNn1H9PBlYJtBgw/w6XgZVu3eJXT3UxcyUN/oUoI+obEVfDuVErrHyLHXtlgJVfCi/uLxQOSeyqDY26mSLj2yUZHTNBTt70OUZNYtJp3ska8pWW8AkKMWT19xHyH90f/3sBtiFf3aPDanlGZlqqLUyxHIzHpfmBWFuH9eqF5KQtOBcWkKu3EoxEH4Aeqw+GRUbHC6tm+fsrHVmCi4sdwhUsHBStcSvc/NQDZIYl016/3x/1tzTBZvmjqhNxVCsf1RRTbPA5jO2cljdCcwDA0OOt3rDu6eZOF7426OUVLjdMJaoT/p2Q8RRd7TqKhlewbP+fSF2bv8iMBIjZ1y5mcwrYw== zcoz08310@gmail.com  
+
+
+
+
+Mit Jelent Ez?
+Teljes szinkronizáció készen áll:
+
+Mostantól egyszerűen frissítheted a fájlokat a GitHub-ra a git push parancs segítségével.
+A változásokat letöltheted a git pull paranccsal.

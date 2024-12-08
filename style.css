@@ -1,0 +1,27 @@
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Teljes szélesség */
+    height: 100%; /* Teljes magasság */
+    background-image: url('path/to/your/background-image.jpg'); /* Cseréld ki a helyes fájlúttal */
+    background-size: 100% 100%; /* Méretezés szélesség és magasság szerint */
+    background-repeat: no-repeat; /* Ne ismétlődjön */
+    background-position: center; /* Középre igazítás */
+    z-index: -1; /* Legyen a háttér */
+}
+
+/* Responsive beállítások kisebb képernyőkre */
+@media (max-width: 768px) { /* Tablet és kisebb képernyők */
+    #background {
+        background-size: contain; /* Megtartja az arányokat */
+        background-position: top; /* A kép teteje legyen a fókusz */
+    }
+}
+
+@media (max-width: 480px) { /* Telefonok */
+    #background {
+        background-size: contain; /* Megtartja az arányokat, a teljes kép látható */
+        background-position: center; /* Középre igazítva */
+    }
+}
