@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoBrowserX Hungary</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoBrowserX Hungary</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
-    <div id="background"></div>
-    <h1>Üdvözöllek a CryptoBrowserX Hungary-ban!</h1>
-    <script src="background-script.js"></script>
+  <div id="background"></div>
+
+  <nav id="navbar">
+    <ul class="menu">
+      <li class="menu-item" onclick="toggleContent('miningDashboard')">MiningDashboard</li>
+      <li class="menu-item dropdown">
+        Crypto
+        <ul class="dropdown-menu">
+          <li onclick="toggleContent('cryptoInfo1')">Bitcoin</li>
+          <li onclick="toggleContent('cryptoInfo2')">Ethereum</li>
+        </ul>
+      </li>
+      <li class="menu-item" onclick="toggleContent('nft')">NFT</li>
+      <li class="menu-item" onclick="toggleContent('exchanges')">Tőzsdék</li>
+      <li class="menu-item" onclick="toggleContent('wallet')">Wallet</li>
+      <li class="menu-item" onclick="toggleContent('analytics')">Ellemzések</li>
+      <li class="menu-item" onclick="toggleContent('youtube')">YouTube</li>
+      <li class="menu-item" onclick="toggleContent('google')">Google</li>
+    </ul>
+  </nav>
+
+  <div id="miningDashboard" class="content hidden">Mining Dashboard Content</div>
+  <div id="cryptoInfo1" class="content hidden">Bitcoin Information</div>
+  <div id="cryptoInfo2" class="content hidden">Ethereum Information</div>
+  <div id="nft" class="content hidden">NFT Content</div>
+  <div id="exchanges" class="content hidden">Tőzsdék Content</div>
+  <div id="wallet" class="content hidden">Wallet Content</div>
+  <div id="analytics" class="content hidden">Ellemzések Content</div>
+  <div id="youtube" class="content hidden">YouTube Content</div>
+  <div id="google" class="content hidden">Google Content</div>
 </body>
 </html>
