@@ -5,14 +5,24 @@ let mainWindow;
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 800,
+    height: 600,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      contextIsolation: true, // Enhance security
-      enableRemoteModule: false, // Disable remote module for safety
-    },
+      contextIsolation: true, // A biztonság érdekében
+      enableRemoteModule: false
+    }
   });
 
   mainWindow.loadFile('index.html');
 });
+function toggleContent(sectionId) {
+    const sections = document.querySelectorAll('.content');
+    sections.forEach(section => {
+        if (section.id === sectionId) {
+            section.classList.toggle('visible');
+        } else {
+            section.classList.remove('visible');
+        }
+    });
+}

@@ -1,4 +1,10 @@
-// Preload script to bridge between Electron main and renderer processes
-window.addEventListener('DOMContentLoaded', () => {
-  console.log("Preload script loaded");
+const { contextBridge } = require('electron');
+
+contextBridge.exposeInMainWorld('api', {
+  toggleContent: (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.classList.toggle('hidden');
+    }
+  }
 });

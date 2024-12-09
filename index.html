@@ -1,42 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CryptoBrowserX Hungary</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoBrowserX Hungary</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="background"></div>
-
-  <nav id="navbar">
-    <ul class="menu">
-      <li class="menu-item" onclick="toggleContent('miningDashboard')">MiningDashboard</li>
-      <li class="menu-item dropdown">
-        Crypto
-        <ul class="dropdown-menu">
-          <li onclick="toggleContent('cryptoInfo1')">Bitcoin</li>
-          <li onclick="toggleContent('cryptoInfo2')">Ethereum</li>
+    <div id="background"></div>
+    <nav id="navbar">
+        <ul class="menu">
+            <li class="menu-item" onclick="toggleContent('dashboard')">MiningDashboard</li>
+            <li class="menu-item dropdown">
+                Crypto
+                <ul class="dropdown-menu">
+                    <li onclick="toggleContent('bitcoin')">Bitcoin</li>
+                    <li onclick="toggleContent('ethereum')">Ethereum</li>
+                </ul>
+            </li>
+            <li class="menu-item" onclick="toggleContent('nft')">NFT</li>
+            <li class="menu-item" onclick="toggleContent('exchange')">Tőzsdék</li>
+            <li class="menu-item" onclick="toggleContent('wallet')">Wallet</li>
+            <li class="menu-item" onclick="toggleContent('analysis')">Elemzések</li>
+            <li class="menu-item" onclick="toggleContent('youtube')">YouTube</li>
+            <li class="menu-item" onclick="toggleContent('google')">Google</li>
         </ul>
-      </li>
-      <li class="menu-item" onclick="toggleContent('nft')">NFT</li>
-      <li class="menu-item" onclick="toggleContent('exchanges')">Tőzsdék</li>
-      <li class="menu-item" onclick="toggleContent('wallet')">Wallet</li>
-      <li class="menu-item" onclick="toggleContent('analytics')">Ellemzések</li>
-      <li class="menu-item" onclick="toggleContent('youtube')">YouTube</li>
-      <li class="menu-item" onclick="toggleContent('google')">Google</li>
-    </ul>
-  </nav>
-
-  <div id="miningDashboard" class="content hidden">Mining Dashboard Content</div>
-  <div id="cryptoInfo1" class="content hidden">Bitcoin Information</div>
-  <div id="cryptoInfo2" class="content hidden">Ethereum Information</div>
-  <div id="nft" class="content hidden">NFT Content</div>
-  <div id="exchanges" class="content hidden">Tőzsdék Content</div>
-  <div id="wallet" class="content hidden">Wallet Content</div>
-  <div id="analytics" class="content hidden">Ellemzések Content</div>
-  <div id="youtube" class="content hidden">YouTube Content</div>
-  <div id="google" class="content hidden">Google Content</div>
+    </nav>
+    <div id="dashboard" class="content">
+        <h1>Welcome to Mining Dashboard</h1>
+        <p>Dashboard content goes here.</p>
+    </div>
+    <div id="bitcoin" class="content">
+        <h1>Bitcoin Information</h1>
+        <p>Details about Bitcoin go
+here.</p>
+    </div>
+    <div id="ethereum" class="content">
+        <h1>Ethereum Information</h1>
+        <p>Details about Ethereum go here.</p>
+    </div>
+    <div id="nft" class="content">
+        <h1>NFT Marketplace</h1>
+        <p>Details about NFTs go here.</p>
+    </div>
+    <div id="exchange" class="content">
+        <h1>Exchanges</h1>
+        <p>Details about exchanges go here.</p>
+    </div>
+    <div id="wallet" class="content">
+        <h1>Wallet Overview</h1>
+        <p>Wallet details go here.</p>
+    </div>
+    <div id="analysis" class="content">
+        <h1>Analysis</h1>
+        <p>Analytical content goes here.</p>
+    </div>
+    <div id="youtube" class="content">
+        <h1>YouTube</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div id="google" class="content">
+        <h1>Google Search</h1>
+        <p>Google search integration goes here.</p>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
