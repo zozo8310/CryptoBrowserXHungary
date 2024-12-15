@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 console.log('renderer.js loaded successfully');
 
+// Attach event listeners to menu items
 document.querySelectorAll('.menu-item').forEach(item => {
     item.addEventListener('click', function () {
         const sectionId = this.getAttribute('data-section-id');
@@ -13,20 +13,20 @@ document.querySelectorAll('.menu-item').forEach(item => {
     });
 });
 
+// Toggle content visibility
 function toggleContent(sectionId) {
     console.log(`Toggling section: ${sectionId}`);
     const sections = document.querySelectorAll('.content');
     sections.forEach(section => {
         if (section.id === sectionId) {
-            // Toggle the visibility of the clicked section
             section.style.display = section.style.display === 'block' ? 'none' : 'block';
         } else {
-            // Ensure all other sections are hidden
             section.style.display = 'none';
         }
     });
 }
 
+// Update task list
 function updateTaskList() {
     console.log('Updating task list...');
     const taskList = document.getElementById('task-list');
@@ -37,8 +37,4 @@ function updateTaskList() {
         listItem.textContent = task;
         taskList.appendChild(listItem);
     });
-=======
-function toggleContent(id) {
-  window.api.toggleContent(id);
->>>>>>> bfcb0ee9355c133e07fb86e6d4fc34e67b08e7c7
 }

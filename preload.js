@@ -1,7 +1,6 @@
 const { contextBridge } = require('electron');
 
 contextBridge.exposeInMainWorld('api', {
-<<<<<<< HEAD
     getTasks: () => {
         console.log('Getting tasks...');
         try {
@@ -18,13 +17,11 @@ contextBridge.exposeInMainWorld('api', {
     clearTasks: () => {
         console.log('Tasks cleared');
         return "Tasks cleared successfully";
+    },
+    toggleContent: (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.classList.toggle('hidden');
+        }
     }
-=======
-  toggleContent: (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.classList.toggle('hidden');
-    }
-  }
->>>>>>> bfcb0ee9355c133e07fb86e6d4fc34e67b08e7c7
 });
