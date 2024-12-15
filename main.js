@@ -1,20 +1,28 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain, shell } = require('electron');
 const path = require('path');
+const aiManager = require('./aiManager');
 
-let mainWindow;
-
-app.on('ready', () => {
-    console.log('main.js loaded successfully');
-
-    mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+function createWindow() {
+    const win = new BrowserWindow({
+        width: 1200,
+        height: 800,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
-            contextIsolation: true, // A biztonság érdekében
-            enableRemoteModule: false
+            contextIsolation: true,
+            enableRemoteModule: false,
+            nodeIntegration: false
         }
     });
 
-    mainWindow.loadFile('index.html');
+    win.loadFile('index.html');
+}
+
+app.whenReady().then(createWindow);
+
+ipcMain.handle('interact-with-ai', (event, type, payload) => {
+    return aiManager.interactWithAI(type, payload);
+});
+
+ipcMain.on('open-google', () => {
+    shell.openExternal('https://www.google.com');
 });

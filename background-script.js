@@ -1,4 +1,4 @@
-// Array of background image paths
+console.log('background-script.js loaded successfully');// Array of background image paths
 const images = [
     "assets/background (1).jpg",
     "assets/background (2).jpg",

@@ -8,105 +8,59 @@
 </head>
 <body>
     <div id="background"></div>
+    <!-- Navigation Bar -->
     <nav id="navbar">
         <ul class="menu">
-            <li class="menu-item" data-section-id="dashboard">MiningDashboard</li>
+            <li class="menu-item" onclick="toggleContent('dashboard')">MININGDASHBOARD</li>
             <li class="menu-item dropdown">
-                Crypto
+                CRYPTO
                 <ul class="dropdown-menu">
-                    <li class="menu-item" data-section-id="bitcoin">Bitcoin</li>
-                    <li class="menu-item" data-section-id="ethereum">Ethereum</li>
+                    <li onclick="toggleContent('bitcoin')">Bitcoin</li>
+                    <li onclick="toggleContent('ethereum')">Ethereum</li>
                 </ul>
             </li>
-            <li class="menu-item" data-section-id="nft">NFT</li>
-            <li class="menu-item" data-section-id="exchange">Tőzsdék</li>
-            <li class="menu-item" data-section-id="wallet">Wallet</li>
-            <li class="menu-item" data-section-id="analysis">Elemzések</li>
-            <li class="menu-item" data-section-id="youtube">YouTube</li>
-            <li class="menu-item" data-section-id="google">Google</li>
+            <li class="menu-item" onclick="toggleContent('nft')">NFT</li>
+            <li class="menu-item" onclick="toggleContent('exchange')">TŐZSDÉK</li>
+            <li class="menu-item" onclick="toggleContent('wallet')">WALLET</li>
+            <li class="menu-item" onclick="toggleContent('analysis')">ELEMZÉSEK</li>
+            <li class="menu-item" onclick="openGoogleSearch()">GOOGLE SEARCH</li>
+            <li class="menu-item" onclick="toggleContent('youtube')">YOUTUBE</li>
             <li class="menu-item dropdown">
-                AI Manager
+                AI MANAGER
                 <ul class="dropdown-menu">
-                    <li class="menu-item" data-section-id="ai-manager">AI Manager</li>
-                    <li class="menu-item" data-section-id="developer">Developer AI</li>
-                    <li class="menu-item" data-section-id="analyst">Analyst AI</li>
-                    <li class="menu-item" data-section-id="creative">Creative AI</li>
-                    <li class="menu-item" data-section-id="automation">Automation AI</li>
-                    <li class="menu-item" data-section-id="advisor">Advisor AI</li>
+                    <li onclick="toggleContent('developer')">Developer</li>
+                    <li onclick="toggleContent('analyst')">Analyst</li>
+                    <li onclick="toggleContent('creative')">Creative</li>
+                    <li onclick="toggleContent('automation')">Automation</li>
+                    <li onclick="toggleContent('advisor')">Advisor</li>
                 </ul>
             </li>
         </ul>
     </nav>
 
     <!-- Content Sections -->
-    <div id="dashboard" class="content">
-        <h1>Welcome to Dashboard</h1>
-    </div>
-    <div id="bitcoin" class="content">
-        <h1>Bitcoin Section</h1>
-    </div>
-    <div id="ethereum" class="content">
-        <h1>Ethereum Section</h1>
-    </div>
-    <div id="nft" class="content">
-        <h1>NFT Section</h1>
-    </div>
-    <div id="exchange" class="content">
-        <h1>Exchange Section</h1>
-    </div>
-    <div id="wallet" class="content">
-        <h1>Wallet Section</h1>
-    </div>
-    <div id="analysis" class="content">
-        <h1>Analysis Section</h1>
-    </div>
+    <div id="dashboard" class="content">Welcome to the Mining Dashboard!</div>
+    <div id="bitcoin" class="content">Bitcoin Content</div>
+    <div id="ethereum" class="content">Ethereum Content</div>
+    <div id="nft" class="content">NFT Section</div>
+    <div id="exchange" class="content">Exchange Section</div>
+    <div id="wallet" class="content">Wallet Section</div>
+    <div id="analysis" class="content">Analysis Section</div>
     <div id="youtube" class="content">
-        <h1>YouTube Player</h1>
-        <iframe id="youtube-player" width="560" height="315" 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
+        <h2>YouTube Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
     </div>
-    <div id="google" class="content">
-        <h1>Google Section</h1>
-    </div>
+    <div id="developer" class="content">Developer AI Functionality</div>
+    <div id="analyst" class="content">Analyst AI Functionality</div>
+    <div id="creative" class="content">Creative AI Functionality</div>
+    <div id="automation" class="content">Automation AI Functionality</div>
+    <div id="advisor" class="content">Advisor AI Functionality</div>
 
-    <!-- AI Manager Section -->
-    <div id="ai-manager" class="content">
-        <h1>AI Manager</h1>
-    </div>
-    <div id="developer" class="content">
-        <h1>Developer AI</h1>
-        <input type="text" id="developer-input" placeholder="Enter a code prompt">
-        <button onclick="handleDeveloperAI()">Generate Code</button>
-        <p id="developer-output"></p>
-    </div>
-    <div id="analyst" class="content">
-        <h1>Analyst AI</h1>
-        <textarea id="analyst-input" placeholder="Enter data"></textarea>
-        <button onclick="handleAnalystAI()">Analyze Data</button>
-        <p id="analyst-output"></p>
-    </div>
-    <div id="creative" class="content">
-        <h1>Creative AI</h1>
-        <input type="text" id="creative-input" placeholder="Enter a request">
-        <button onclick="handleCreativeAI()">Generate Content</button>
-        <p id="creative-output"></p>
-    </div>
-    <div id="automation" class="content">
-        <h1>Automation AI</h1>
-        <input type="text" id="automation-input" placeholder="Enter a task">
-        <button onclick="handleAutomationAI()">Execute Task</button>
-        <p id="automation-output"></p>
-    </div>
-    <div id="advisor" class="content">
-        <h1>Advisor AI</h1>
-        <input type="text" id="advisor-input" placeholder="Enter a topic">
-        <button onclick="handleAdvisorAI()">Get Advice</button>
-        <p id="advisor-output"></p>
-    </div>
-
+       <!-- Include Scripts -->
+    <script src="preload.js"></script>
+    <script src="main.js"></script>
     <script src="renderer.js"></script>
+    <script src="aiManager.js"></script>
+    <script src="background-script.js"></script>
 </body>
 </html>
